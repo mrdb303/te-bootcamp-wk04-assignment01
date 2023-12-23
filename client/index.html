@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer type="module"></script>
+  <title>Visitor Guestbook</title>
+</head>
+<body>
+
+  <header>
+    <h1>Visitor Guestbook</h1>
+  </header>
+
+  <div id="wrapper">
+    <div class="heading-box"><h2>Please leave a message:</h2></div>
+
+    <section>
+      <form id="guestbookform">
+        <label>Your Name:</label><br>
+        <input name="username" placeholder="Your name" />
+
+        <br><br>
+        <label>Message:</label><br>
+
+        <textarea name="message" cols="50" rows="3" maxlength="300" 
+          placeholder="Your message"></textarea>
+        <br><br>
+
+        <button>Add Message</button>
+      </form>
+    </section>
+
+    <hr class="separator">
+
+    <div class="heading-box"><h2>Previous messages</h2></div>
+
+    <div id="guestbookContainer"></div> <!-- Populated by JS-->
+
+  </div>
+  <footer><p>Danny Brien 2023</p></footer>
+</body>
+</html>

@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+
+html {
+  background-color: #d8d0c5;
+  font-size: 16px;
+}
+
+
+header {
+  background-color: #2f472b;
+  padding-top: 0.6rem;
+  text-align: center;
+  height: 4rem;
+  margin-bottom: 5rem;
+}
+
+#wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+h1 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 0.11rem;
+}
+
+
+h3, h2 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+
+h2 {font-size: 1.3rem;}
+
+
+h3 {
+  font-size: 1.05rem; 
+  margin-bottom: 0.5rem;
+}
+
+
+.heading-box {
+  margin-top: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+
+#guestbookform {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 1.5rem;
+  background-color: #b1b8b0;
+  max-width: 600px;
+  padding: 1.5rem;
+  border: 1px solid #a4b1a2;
+  border-radius: 1rem;
+}
+
+
+.button-wrapper {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+label {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  width: 6rem;
+  padding-bottom: 0.3rem;
+}
+
+
+input {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  height: 1.4rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
+
+input[type=text] {
+  border: 1px solid blue;
+  padding-left: 5px;
+  border-radius: 4px;
+}
+
+
+textarea{
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
+
+button {
+  background-color: #2f472b;
+  color: white;
+  height: 1.7rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #253c21;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #142c12;
+  transition: background-color 240ms linear;
+}
+
+
+.delete-button {
+  background-color: darkred;
+  margin-top: 8px;
+  padding: 2px;
+  height: 1.4rem;
+  width: 3rem;
+  display: flex;
+}
+
+
+.delete-button:hover {
+  background-color: #c40000;
+}
+
+
+.message-instance {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  background-color: #b1b8b0;
+  max-width: 600px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  border: 1px solid #a4b1a2;
+  border-radius: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+
+.like-button, .delete-button {
+  background: url("./images/thumb_up.svg") center no-repeat;
+  color: white;
+  background-color: #2f472b;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 8px;
+  padding: 3px;
+  display: flex;
+}
+
+
+.delete-button {
+  background: url("./images/delete.svg") center no-repeat;
+  background-color: darkred;
+}
+
+
+.like-button:hover {
+  background-color: #5f795a;
+}
+
+
+.message-content {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid grey;
+}
+
+
+hr.separator {
+  border-top: 1px solid #253c21;
+  margin-left: 1.5rem;
+}
+
+
+footer {
+  height: 4rem;
+  background-color: #253c21;
+  margin-top: 6rem;
+  text-align: center;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  padding-top: 0.5rem;
+  color: whitesmoke;
+}
+
+
+@media only screen and (max-width: 600px){
+  
+  .message-instance{
+    max-width: 320px;
+    margin-left: 1rem;
+  }
+
+  #wrapper {
+    width: 99%;
+  }
+
+  #guestbookform {
+    max-width: 320px;
+    margin-left: 1rem;
+  }
+
+  .heading-box {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  hr.separator {
+    max-width: 320px;;
+    margin-left: 1rem;
+  }
+
+}
