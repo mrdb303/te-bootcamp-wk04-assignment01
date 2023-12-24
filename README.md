@@ -71,5 +71,8 @@ On the local node server, everything works perfectly. On the render.com service,
 However, as of 20:58 on Christmas eve, everything seems to be working and I'm not going to make any more changes.
 
 Line 6 on app.js allows toggling between render.com server and local server: 
+
+```
 isLive = true;  // Changes the script to set it to use the live render.com server.
 isLive = false;  // Changes the script to set it to use the local server.
+```
