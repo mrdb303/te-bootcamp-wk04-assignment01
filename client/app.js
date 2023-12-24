@@ -1,10 +1,9 @@
 const form = document.getElementById("guestbookform");
-
-const isLive = true;  // Toggle server between live hosted and internal server
-
-
 const extServ = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com/guestbook';
 const intServ = 'http://localhost:8080/guestbook';
+
+
+const isLive = true;  // Toggle server between live hosted and internal server
 const fetchAddressUrl = (isLive)? extServ: intServ;
 
 

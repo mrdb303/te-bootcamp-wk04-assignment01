@@ -19,7 +19,6 @@ db.exec(`
     ('Billy Table', 'Do not drop me.', '2023-12-18T19:14:02.839Z', 17),
     ('Cilla Black', 'Surprise suprise!.', '2023-12-21T19:10:08.839Z', 2),
     ('Bill Oddie', 'This is a much longer message that should stretch to multiple rows or I will eat my wool-based headwear.', '2023-12-21T19:11:02.839Z', 19),
-    ('Tech Educators cool marker person', 'I like this assignment so much, it is well worth top marks.', '2023-12-21T19:12:35.839Z', 999),
-    ('Ronnie Pickering', 'Do you know who I am?.', '2023-12-21T19:14:02.839Z', 10)
-    
+    ('Ronnie Pickering', 'Do you know who I am?.', '2023-12-21T19:14:02.839Z', 10),
+    ('Baz Manilow', 'The page will not refresh here, even though it did on the local server. Grrr....', '2023-12-24T19:15:07.839Z', 10)
 `);
