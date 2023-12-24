@@ -133,7 +133,7 @@ const setListenersForLikeButtons = async () => {
 
 
 async function sendGiveAThumbsUp(event) {
-  event.preventDefault();
+  //event.preventDefault();
   clearGuestbookMessageContainer();
   let attr = this.getAttribute("data-id"); // rowid value from sqlite3
   
@@ -173,13 +173,13 @@ form.addEventListener("submit", async function (event) {
   });
   const json = await response.json();
 
-  getGuestbook(); //new fix?.
+  getGuestbook();
 });
 
 
 
 async function sendDeleteRequest(event){
-  event.preventDefault();
+  //event.preventDefault();
   clearGuestbookMessageContainer();
   let attr = this.getAttribute("data-id"); // rowid value from sqlite3
   
