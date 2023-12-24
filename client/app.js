@@ -132,22 +132,7 @@ const setListenersForLikeButtons = async () => {
 }
 
 
-async function sendGiveAThumbsUp(event) {
-  //event.preventDefault();
-  clearGuestbookMessageContainer();
-  let attr = this.getAttribute("data-id"); // rowid value from sqlite3
-  
-  const obj = {username: "", message: "", id: attr, action: "like"};
 
-  const response = await fetch(fetchAddressUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(obj),
-  });
-  const json = await response.json();
-}
 
 
 
@@ -176,6 +161,25 @@ form.addEventListener("submit", async function (event) {
   getGuestbook();
 });
 
+
+async function sendGiveAThumbsUp(event) {
+  //event.preventDefault();
+  clearGuestbookMessageContainer();
+  let attr = this.getAttribute("data-id"); // rowid value from sqlite3
+  
+  const obj = {username: "", message: "", id: attr, action: "like"};
+
+  const response = await fetch(fetchAddressUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(obj),
+  });
+  const json = await response.json();
+
+  getGuestbook(); //new fix?.
+}
 
 
 async function sendDeleteRequest(event){
