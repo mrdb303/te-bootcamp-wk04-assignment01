@@ -1,5 +1,7 @@
 const form = document.getElementById("guestbookform");
-const fetchAddressUrl = 'http://localhost:8080/guestbook';
+const fetchAddressUrl = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com';
+// http://localhost:8080/guestbook
+
 
 
 // Ensures the removal of existing entries. This needs to be done to
