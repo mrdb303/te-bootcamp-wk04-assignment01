@@ -1,5 +1,5 @@
 const form = document.getElementById("guestbookform");
-const fetchAddressUrl = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com';
+const fetchAddressUrl = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com/guestbook';
 // http://localhost:8080/guestbook
 
 
