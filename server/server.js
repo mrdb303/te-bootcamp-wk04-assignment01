@@ -24,7 +24,7 @@ app.get("/", function (request, response) {
 // Results returned in descending order so that the last guestbook post is
 // displayed at the top in date order.
 app.get("/guestbook", function (request, response) {
-  const guestbook = db.prepare("SELECT rowid, * FROM guestbook ORDER BY visit DESC").all();
+  let guestbook = db.prepare("SELECT rowid, * FROM guestbook ORDER BY visit DESC").all();
   response.json(guestbook);
 });
 
@@ -39,7 +39,7 @@ app.post("/guestbook", function (request, response) {
     insertANewMessage(request.body.username, request.body.message);
   }
 
-  const guestbook = db.prepare("SELECT rowid, * FROM guestbook ORDER BY visit DESC").all();
+  let guestbook = db.prepare("SELECT rowid, * FROM guestbook ORDER BY visit DESC").all();
   response.json(guestbook);
 });
 
@@ -61,14 +61,14 @@ function insertANewMessage(username, message){
 
 
 function increaseLikes(idNum){
-  const change =
+  let change =
     db.prepare(`UPDATE guestbook SET likes = likes + 1 WHERE rowid = ?`)
       .run(idNum);
 }
 
 
 function deleteMessage(idNum){
-  const change =
+  let change =
     db.prepare(`DELETE FROM guestbook WHERE rowid = ?`)
       .run(idNum);
 }

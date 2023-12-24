@@ -33,19 +33,17 @@ User stories were used to define the scope of the project.
 
 The CSS code written will change the layout of the page depending on the screen resolution, through the use of media queries and layout scaling. 
 
-Open source font used (Google font "Lato").
-
-Delete and 'like' buttons added, using open source SVG icons.
+DELETE, SELECT, UPDATE and CREATE SQL statements were used to query the backend database and perform the deletion and the writing of records(CRUD). In addition, ORDER BY was used to fetch data in the order of date and time that messages were left. This ensures that the last record saved will appear at the top of the list. This improves the user experience as the user does not need to scroll to the bottom of the page to see the message they have just recorded.
 
 In addition to the specification, a feature was added to write the date and time that the post was left. This is displayed at the bottom of each post in a readable format for the UK. 
 
-DELETE, SELECT and CREATE SQL statements were used to query the backend database and perform the deletion and the writing of records. In addition, ORDER BY was used to fetch data in the order of date and time that messages were left. This ensures that the last record saved will appear at the top of the list. This improves the user experience as the user does not need to scroll to the bottom of the page to see the message they have just recorded.
+Delete and 'like' buttons added, using open source SVG icons.
 
 Input to the guestbook form is trimmed to remove excess spacing.
 
+Open source font used (Google font "Lato").
+
 When hovering the mouse over the left and right buttons , the colour of the background changes with a gradual transition.
-
-
 
 <br>
 
@@ -63,4 +61,14 @@ The following stretch goals were implemented
 ### Issues
 
 Initially the 'like' and delete message button were close to each other, which made it too easy to accidentally click the delete button instead of the like button. To resolve this, they were positioned at either end of each post, using flexbox to handle the layout.
+
+I came across problems when uploading to the render.com service.
+On the local node server, everything works perfectly. On the render.com service, it works intermittently.
+The issue lies with the page refreshing when an action is taken, i.e. when the form submit button, delete button or 'like' button is clicked.
+The server registers a button has been pressed and performs the required database action. However, the messages do not always refresh and reload.
+If the page is manually refreshed, the past messages appear. 
+
+Line 6 on app.js allows toggling between render.com server and local server: 
+isLive = true;  // Changes the script to set it to use the live render.com server.
+isLive = false;  // Changes the script to set it to use the local server.
 
