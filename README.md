@@ -43,7 +43,7 @@ Input to the guestbook form is trimmed to remove excess spacing.
 
 Open source font used (Google font "Lato").
 
-When hovering the mouse over the left and right buttons , the colour of the background changes with a gradual transition.
+When hovering the mouse over the buttons , the colour of the background changes with a gradual transition.
 
 Initially I intended to create an auto incrementing integer id field on the database as a primary key. However, the official documentation for sqlite discourages use of this approach and to use the built-in functionality of rowid which is more performant.
 See [here](https://www.sqlite.org/autoinc.html).
