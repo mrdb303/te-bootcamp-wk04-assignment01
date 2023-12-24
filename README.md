@@ -45,6 +45,10 @@ Open source font used (Google font "Lato").
 
 When hovering the mouse over the left and right buttons , the colour of the background changes with a gradual transition.
 
+Initially I intended to create an auto incrementing integer id field on the database as a primary key. However, the official documentation for sqlite discourages use of this approach and to use the built-in functionality of rowid which is more performant.
+See [here](https://www.sqlite.org/autoinc.html).
+
+
 <br>
 
 
@@ -60,15 +64,12 @@ The following stretch goals were implemented
 
 ### Issues
 
-Initially the 'like' and delete message button were close to each other, which made it too easy to accidentally click the delete button instead of the like button. To resolve this, they were positioned at either end of each post, using flexbox to handle the layout.
+Initially the 'like' and 'delete message' buttons were close to each other, which made it too easy to accidentally click the delete button instead of the like button. To resolve this, they were positioned at either end of each post, using flexbox to handle the layout.
 
-I came across problems when uploading to the render.com service.
-On the local node server, everything works perfectly. On the render.com service, it works intermittently.
-The issue lies with the page refreshing when an action is taken, i.e. when the form submit button, delete button or 'like' button is clicked.
-The server registers a button has been pressed and performs the required database action. However, the messages do not always refresh and reload.
-If the page is manually refreshed, the past messages appear. 
+I intended to submit the assignment on Saturday 23rd, but came across problems when uploading to the render.com service.
+On the local node server, everything works perfectly. On the render.com service, it worked intermittently so I made extra tweaks to the code.
+However, as of 20:58 on Christmas eve, everything seems to be working and I'm not going to make any more changes.
 
 Line 6 on app.js allows toggling between render.com server and local server: 
 isLive = true;  // Changes the script to set it to use the live render.com server.
 isLive = false;  // Changes the script to set it to use the local server.
-
