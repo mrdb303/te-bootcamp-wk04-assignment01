@@ -1,6 +1,11 @@
 const form = document.getElementById("guestbookform");
-const fetchAddressUrl = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com/guestbook';
-// http://localhost:8080/guestbook
+
+const isLive = true;  // Toggle server between live hosted and internal server
+
+
+const extServ = 'https://te-bootcamp-wk04-guestbook-serv.onrender.com/guestbook';
+const intServ = 'http://localhost:8080/guestbook';
+const fetchAddressUrl = (isLive)? extServ: intServ;
 
 
 
@@ -128,7 +133,8 @@ const setListenersForLikeButtons = async () => {
 }
 
 
-async function sendGiveAThumbsUp() {
+async function sendGiveAThumbsUp(event) {
+  event.preventDefault();
   clearGuestbookMessageContainer();
   let attr = this.getAttribute("data-id"); // rowid value from sqlite3
   
@@ -171,7 +177,8 @@ form.addEventListener("submit", async function (event) {
 
 
 
-async function sendDeleteRequest(){
+async function sendDeleteRequest(event){
+  event.preventDefault();
   clearGuestbookMessageContainer();
   let attr = this.getAttribute("data-id"); // rowid value from sqlite3
   
