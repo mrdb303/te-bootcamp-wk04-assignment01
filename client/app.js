@@ -204,6 +204,7 @@ async function getGuestbook() {
     combineHTMLElementsPerMessageInstance(messageEntry);
   });
 
+  
   // Now we have all of the messages and buttons on the page, we can set
   // the event listeners for those newly created buttons.
   document.querySelector('footer').style.display = "block";
@@ -211,4 +212,3 @@ async function getGuestbook() {
   setListenersForDeleteButtons();
 }
 
-getGuestbook();
