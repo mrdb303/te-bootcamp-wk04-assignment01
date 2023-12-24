@@ -75,6 +75,6 @@ function deleteMessage(idNum){
 
 
 //8080
-app.listen("/", function () {
+app.listen(8080, function () {
   console.log("IT'S WORKING!");
 });
