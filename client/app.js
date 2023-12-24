@@ -173,6 +173,8 @@ form.addEventListener("submit", async function (event) {
     body: JSON.stringify(formValues),
   });
   const json = await response.json();
+
+  getGuestbook(); //new fix?.
 });
 
 
@@ -192,6 +194,8 @@ async function sendDeleteRequest(event){
     body: JSON.stringify(obj),
   });
   const json = await response.json();
+
+  getGuestbook(); //new fix?.
 }
 
 
@@ -204,7 +208,7 @@ async function getGuestbook() {
     combineHTMLElementsPerMessageInstance(messageEntry);
   });
 
-  
+
   // Now we have all of the messages and buttons on the page, we can set
   // the event listeners for those newly created buttons.
   document.querySelector('footer').style.display = "block";
